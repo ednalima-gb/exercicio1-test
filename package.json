@@ -11,7 +11,9 @@
   "license": "ISC",
   "dependencies": {
     "cpf-cnpj-validator": "^1.0.3",
-    "express": "^4.18.2"
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2",
+    "mongoose": "^8.1.1"
   },
   "devDependencies": {
     "@types/jest": "^29.5.11",
