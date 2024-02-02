@@ -1,4 +1,4 @@
-const CheckPassword = require('../../../src/utils/check-password')
+const CheckPassword = require('../../../../src/utils/check-password')
 
 describe('Testar checkpassword', () => {
     test('Deve retornar true se as duas senhas forem iguais', () => {

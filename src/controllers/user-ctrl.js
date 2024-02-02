@@ -1,11 +1,11 @@
-const UserModel = require('../models/User')
+const UserService = require('../service/user')
 const CheckPassword = require('../utils/check-password')
 const CpfValidator = require('../utils/cpf-validator')
 
 class CharacterController {
     static async create(req, res) {
         try {
-            const { name, cpf, password, confirmPassword } = req.body
+            const { name, email, cpf, password, confirmPassword } = req.body
     
             if(!CpfValidator.isValid(cpf)) {
                 res.status(400).json({ error: 'CPF Inválido'})
@@ -17,8 +17,9 @@ class CharacterController {
                 return
             }
 
-            const user = await UserModel.create({
-                name, 
+            const user = await UserService.create({
+                name,
+                email, 
                 cpf, 
                 password, 
                 confirmPassword
